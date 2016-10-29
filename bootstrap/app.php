@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    myths\Http\Kernel::class
+    Myths\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    myths\Console\Kernel::class
+    Myths\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    myths\Exceptions\Handler::class
+    Myths\Exceptions\Handler::class
 );
 
 /*

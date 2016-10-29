@@ -1,6 +1,6 @@
 <?php
 
-namespace myths\Providers;
+namespace Myths\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace myths\Http\Controllers\Auth;
+namespace Myths\Http\Controllers\Auth;
 
-use myths\User;
-use myths\Http\Controllers\Controller;
+use Myths\User;
+use Myths\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace myths\Providers;
+namespace Myths\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'myths\Model' => 'myths\Policies\ModelPolicy',
+        'Myths\Model' => 'Myths\Policies\ModelPolicy',
     ];
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace myths\Http\Middleware;
+namespace Myths\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

@@ -1,6 +1,6 @@
 <?php
 
-namespace myths\Exceptions;
+namespace Myths\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

@@ -20,7 +20,7 @@
             "database"
         ],
         "psr-4": {
-            "myths\\": "app/"
+            "Myths\\": "app/"
         }
     },
     "autoload-dev": {

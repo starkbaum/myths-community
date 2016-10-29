@@ -172,11 +172,11 @@ return [
         /*
          * Application Service Providers...
          */
-        myths\Providers\AppServiceProvider::class,
-        myths\Providers\AuthServiceProvider::class,
-        // myths\Providers\BroadcastServiceProvider::class,
-        myths\Providers\EventServiceProvider::class,
-        myths\Providers\RouteServiceProvider::class,
+        Myths\Providers\AppServiceProvider::class,
+        Myths\Providers\AuthServiceProvider::class,
+        // Myths\Providers\BroadcastServiceProvider::class,
+        Myths\Providers\EventServiceProvider::class,
+        Myths\Providers\RouteServiceProvider::class,
 
     ],
 
