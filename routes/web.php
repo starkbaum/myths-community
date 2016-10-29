@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
-# Profiles
+# Settings
 
-Route::get('/profile', 'UserController@profile');
+Route::get('/settings', 'UsersController@settings');
+Route::post('/avatar', 'UsersController@storeAvatar');

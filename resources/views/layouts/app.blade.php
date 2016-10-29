@@ -59,7 +59,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ url('/profile') }}">Profil</a></li>
+                                    <li><a href="{{ url('/settings') }}">Settings</a></li>
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
@@ -79,7 +79,9 @@
             </div>
         </nav>
 
-        @yield('content')
+        <main class="container">
+            @yield('content')
+        </main>
     </div>
 
     <!-- Scripts -->
