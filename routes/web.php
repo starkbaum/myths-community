@@ -11,6 +11,8 @@
 |
 */
 
+use Myths\Mail\WelcomeEmail;
+
 Route::get('/', function () {
     return view('welcome');
 });

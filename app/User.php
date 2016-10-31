@@ -4,6 +4,7 @@ namespace Myths;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Myths\Events\UserRegistered;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function register($attributes) : User {
+        $user = static::create($attributes);
+
+        event(new UserRegistered($user));
+
+        return $user;
+    }
 }
