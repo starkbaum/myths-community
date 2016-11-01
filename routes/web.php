@@ -26,3 +26,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/settings', 'UsersController@settings');
 Route::post('/avatar', 'UsersController@storeAvatar');
+
+
+# Admin
+
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/roles', 'RolesController@index');
