@@ -1,6 +1,5 @@
-$(document).ready(function(){
-    $(".dropdown-button").dropdown({
-            hover: true
-    });
-});
 
+$('.modal').modal();
+$(".dropdown-button").dropdown({
+    hover: false
+});

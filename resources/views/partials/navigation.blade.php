@@ -23,7 +23,7 @@
         <a href="#!" class="brand-logo">{{ config('app.name', 'Laravel') }}</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="sass.html">Forum</a></li>
-            <li><a href="badges.html">Mitglieder</a></li>
+            <li><a href="{{ url('/user') }}">Mitglieder</a></li>
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-button" href="#!" data-activates="dropdown1">@if(Auth::check()){{ Auth::user()->name }}@endif<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
