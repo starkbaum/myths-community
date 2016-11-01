@@ -6,9 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
+use Myths\User;
 
 class UsersController extends Controller
 {
+    public function index()
+    {
+        $users = User::all();
+
+        return view('users.index', compact('users'));
+    }
+
 
     public function settings()
     {

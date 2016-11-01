@@ -27,6 +27,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/settings', 'UsersController@settings');
 Route::post('/avatar', 'UsersController@storeAvatar');
 
+# User
+
+Route::get('/user', 'UsersController@index');
 
 # Admin
 
