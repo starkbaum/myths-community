@@ -29,7 +29,13 @@ class User extends Authenticatable
     ];
 
     public static function register($attributes) : User {
-        $user = static::create($attributes);
+        $user = new static();
+
+        $user->name = $attributes['name'];
+        $user->email = $attributes['email'];
+        $user->password = bcrypt($attributes['password']);
+
+        $user->save();
 
         event(new UserRegistered($user));
 
