@@ -17,16 +17,102 @@
 
 @section('content')
 
+{{-- profile picture --}}
 <div class="row">
     <div class="col s12">
-
         <div class="settings-avatar center-align">
             <img src="/uploads/avatars/{{ $user->avatar }}" alt="" class="circle"/>
         </div>
-
-
     </div>
 </div>
+
+<div class="row">
+    <div class="col hide-on-small-only m3 l2">
+        <ul class="section table-of-contents">
+            <li><a href="#personal">Persönliche Einstellungen</a></li>
+            <li><a href="#forum">Foren Einstellungen</a></li>
+            <li><a href="#initialization">Intialization</a></li>
+        </ul>
+    </div>
+    <div class="col s12 m9 l10">
+        <div id="personal" class="section scrollspy">
+            <div class="card blue-grey darken-3">
+                <div class="card-content white-text">
+                    <span class="card-title">Persönliche Einstellungen</span>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Username</td>
+                            <td>{{ $user->name }}</td>
+                        </tr>
+                        <tr>
+                            <td>E-Mail</td>
+                            <td>{{ $user->email }}</td>
+                        </tr>
+                        <tr>
+                            <td>Passwort</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        <tr>
+                            <td>Twitter</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        <tr>
+                            <td>Google+</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="forum" class="section scrollspy">
+            <div class="card blue-grey darken-3">
+                <div class="card-content white-text">
+                    <span class="card-title">Persönliche Einstellungen</span>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Username</td>
+                            <td>{{ $user->name }}</td>
+                        </tr>
+                        <tr>
+                            <td>E-Mail</td>
+                            <td>{{ $user->email }}</td>
+                        </tr>
+                        <tr>
+                            <td>Passwort</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        <tr>
+                            <td>Twitter</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        <tr>
+                            <td>Google+</td>
+                            <td><a href="">Ändern</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="initialization" class="section scrollspy">
+            <p>Content </p>
+        </div>
+    </div>
+</div>
+
 
 <form action="/avatar" method="POST" enctype="multipart/form-data">
 <div id="upload-avatar" class="modal bottom-sheet blue-grey darken-2 grey-text">
