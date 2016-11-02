@@ -37,6 +37,8 @@
         </div>
 
         @yield('fab')
+
+        @yield('modals')
     </div>
 
     <!-- Scripts -->

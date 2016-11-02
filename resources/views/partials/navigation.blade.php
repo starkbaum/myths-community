@@ -5,6 +5,7 @@
         <li><a href="{{ url('/register') }}">Register</a></li>
     @else
         <li><a href="{{ url('/settings') }}">Settings</a></li>
+        <li><a href="{{ url('/admin') }}">Administration</a></li>
         <li>
             <a href="{{ url('/logout') }}"
                onclick="event.preventDefault();
