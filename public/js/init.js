@@ -1,6 +1,7 @@
 
 $('.modal').modal();
 $(".dropdown-button").dropdown({
-    hover: false
+    hover: false,
+    beloworigin: true
 });
 $('.scrollspy').scrollSpy();

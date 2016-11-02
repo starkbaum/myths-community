@@ -3,6 +3,7 @@
 namespace Myths\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Myths\Role;
 
 class RolesController extends Controller
 {
@@ -13,17 +14,9 @@ class RolesController extends Controller
      */
     public function index()
     {
-        return view('admin.roles.index');
-    }
+        $roles = Role::all();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('admin.roles.index', compact('roles'));
     }
 
     /**
@@ -34,7 +27,13 @@ class RolesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $role = new Role();
+
+        $role->name = $request->name;
+
+        $role->save();
+
+        return redirect()->back();
     }
 
     /**

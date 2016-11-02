@@ -1,17 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-use Myths\Mail\WelcomeEmail;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,7 +12,7 @@ Route::get('/home', 'HomeController@index');
 
 # Settings
 
-Route::get('/settings', 'UsersController@settings');
+Route::get('/settings', 'UsersController@settings')->middleware('auth');
 Route::post('/avatar', 'UsersController@storeAvatar');
 
 # User
@@ -35,3 +23,5 @@ Route::get('/user', 'UsersController@index');
 
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/roles', 'RolesController@index');
+
+Route::post('/admin/roles', 'RolesController@store');

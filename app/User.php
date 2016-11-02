@@ -41,4 +41,13 @@ class User extends Authenticatable
 
         return $user;
     }
+
+    /**
+     * One User can have many roles
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function roles()
+    {
+        return $this->hasMany(Role::class);
+    }
 }
