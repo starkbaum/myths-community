@@ -68,6 +68,7 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => Myths\User::class,
+            'table' => 'users',
         ],
 
         // 'users' => [
