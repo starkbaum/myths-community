@@ -24,6 +24,9 @@
             <span class="title">
                 <a href="{{ url('/user', $user->id) }}">{{ $user->name }}</a>
             </span>
+            @foreach($user->roles as $role)
+                {{ $role->name }}
+            @endforeach
         </li>
         @endforeach
     </ul>

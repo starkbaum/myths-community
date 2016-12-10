@@ -2,18 +2,17 @@
 
 namespace Myths;
 
-use Illuminate\Database\Eloquent\Model;
+use Zizaco\Entrust\EntrustRole;
+use Zizaco\Entrust\Traits\EntrustRoleTrait;
 
-class Role extends Model
+class Role extends EntrustRole
 {
-    protected $fillable = ['name', 'description'];
+    use EntrustRoleTrait;
 
-    /**
-     * One Role can be taken by many users
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
     public function user()
     {
         return $this->belongsToMany(User::class);
     }
+
+
 }

@@ -33,7 +33,7 @@ class UsersController extends Controller
             File::delete(public_path('/uploads/avatars/' . $user->avatar));
             $avatar = $request->file('avatar');
             $fileName = str_slug($user->name) . '-' . time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(150, 150)->save(public_path('/uploads/avatars/' . $fileName));
+            Image::make($avatar)->resize(150, 150)->save(public_path('uploads/avatars/' . $fileName));
             $user->avatar = $fileName;
             $user->save();
         }

@@ -5,10 +5,11 @@ namespace Myths;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Myths\Events\UserRegistered;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -46,8 +47,8 @@ class User extends Authenticatable
      * One User can have many roles
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function roles()
+    public function role()
     {
-        return $this->hasMany(Role::class);
+        return $this->belongsToMany(Role::class);
     }
 }

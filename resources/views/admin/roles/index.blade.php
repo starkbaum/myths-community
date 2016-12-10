@@ -21,25 +21,36 @@
         @include('admin.partials.navigation')
     </div>
     <div class="col s10 card blue-grey darken-3">
-        <table class="grey-text">
-            <thead>
-            <tr>
-                <th data-field="id">Rolle</th>
-                <th data-field="name">Permissions</th>
-                <th data-field="price">Aktionen</th>
-            </tr>
-            </thead>
+        <ul class="collapsible popout" data-collapsible="accordion">
+            @foreach($roles as $role)
+            <li>
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>{{ $role->display_name }} <small>{{ $role->name }}</small></div>
+                <div class="collapsible-body">
+                    <div class="row">
+                        <ul class="collection with-header col s5">
+                            <li class="collection-header"><h6>Mitglieder</h6></li>
+                            @foreach($role->user as $user)
+                                <li class="collection-item avatar">
+                                    <img src="/uploads/avatars/{{ $user->avatar }}" alt="" class="circle">
+                                    <span class="title">{{ $user->name }}</span>
+                                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                </li>
+                            @endforeach
+                        </ul>
+                        <ul class="collection with-header col s7">
+                            <li class="collection-header"><h6>Rechte</h6></li>
 
-            <tbody>
-                @foreach($roles as $role)
-                <tr>
-                    <td>{{ $role->name }}</td>
-                    <td>xxxxxxx</td>
-                    <td>Edit - Delete</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+                            <li class="collection-item">
+                                <div>{{ $user->name }}<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </li>
+            @endforeach
+        </ul>
     </div>
 </div>
 @endsection

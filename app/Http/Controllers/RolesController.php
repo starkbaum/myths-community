@@ -29,7 +29,9 @@ class RolesController extends Controller
     {
         $role = new Role();
 
-        $role->name = $request->name;
+        $role->display_name = $request->name;
+
+        $role->name = str_slug($request->name);
 
         $role->save();
 
