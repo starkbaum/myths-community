@@ -50,12 +50,14 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Category $category
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
-    public function show($id)
+    public function show(Category $category)
     {
-        //
+        $categories = Category::all();
+        return view('forums.show', compact('category', 'categories'));
     }
 
     /**

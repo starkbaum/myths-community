@@ -9,6 +9,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+# Forum
+
+Route::get('forum', 'ForumController@index')->name('forum.index');
+Route::get('/forum/{category}', 'CategoriesController@show')->name('forums.show');
+
 
 # Settings
 
