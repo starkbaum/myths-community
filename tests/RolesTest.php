@@ -7,7 +7,7 @@ use Myths\Role;
 
 class RolesTest extends TestCase
 {
-    use DatabaseTransactions;
+    use DatabaseMigrations;
 
     /** @test */
     public function a_new_role_can_be_added_without_description()
