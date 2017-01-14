@@ -17,10 +17,10 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col s12 m3 l2">
             @include('forums.partials.categoriesList')
         </div>
-        <div class="col-sm-9">
+        <div class="col s12 m9 l10">
             <div class="collection">
                 <a href="#!" class="collection-item">Alvin</a>
                 <a href="#!" class="collection-item active">Alvin</a>
