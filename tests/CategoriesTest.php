@@ -19,7 +19,7 @@ class CategoriesTest extends TestCase
             'description'   => $category->description
         ]);
 
-        $category->delete();
+        $this->visitRoute('admin.categories.delete', $category->id);
 
         $this->NotSeeInDatabase('categories', [
             'id'            => $category->id,
@@ -28,13 +28,4 @@ class CategoriesTest extends TestCase
         ]);
     }
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
 }
