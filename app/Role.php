@@ -9,6 +9,8 @@ class Role extends EntrustRole
 {
     use EntrustRoleTrait;
 
+    protected $fillable = ['name', 'description'];
+
     public function user()
     {
         return $this->belongsToMany(User::class);
